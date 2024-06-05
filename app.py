@@ -5,9 +5,11 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel
 
 # download internlm2 to the base_path directory using git tool
 base_path = './course4'
+print("工作目录：")
+print os.getcwd()
 os.system(f'git clone https://code.openxlab.org.cn/OpenLMLab/course4.git {base_path}')
 os.system(f'cd {base_path} && git lfs pull')
-
+print os.getcwd()
 tokenizer = AutoTokenizer.from_pretrained('/home/xlab-app-center/course4', trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained(base_path,trust_remote_code=True, torch_dtype=torch.float16).cuda()
 
