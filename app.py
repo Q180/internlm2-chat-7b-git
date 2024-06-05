@@ -8,7 +8,7 @@ base_path = './course4'
 print("工作目录：")
 print(os.getcwd())
 
-os.system(f'git clone https://code.openxlab.org.cn/OpenLMLab/course4.git {base_path}')
+os.system(f'git clone https://code.openxlab.org.cn/Q180/course4.git {base_path}')
 os.system(f'cd {base_path} && git lfs pull')
 
 print(os.getcwd())
