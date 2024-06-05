@@ -8,7 +8,7 @@ base_path = './course4'
 os.system(f'git clone https://code.openxlab.org.cn/OpenLMLab/course4.git {base_path}')
 os.system(f'cd {base_path} && git lfs pull')
 
-tokenizer = AutoTokenizer.from_pretrained(/home/xlab-app-center/course4, trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained('/home/xlab-app-center/course4', trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained(base_path,trust_remote_code=True, torch_dtype=torch.float16).cuda()
 
 def chat(message,history):
